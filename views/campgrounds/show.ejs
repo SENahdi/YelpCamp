@@ -6,20 +6,21 @@
 			<div class="col-lg-9">
 				<div class="card p-3 mb-4 dark-brown">
 					<img src="<%= campground.image %> " class="img-fluid rounded" alt="<%= campground.name %>">
-					<div>
-						<h4 class="text-right mt-2">$<%= campground.price %>/night</h4>
+					<div> <!-- there's an error here-->
+						<h4 class="text-right mt-2">$<%= campground.price %> /night</h4>
 						<h1 class="title-font"><a><%= campground.name %></a></h1>
 						<p><%= campground.description %></p>
 						<p>Submitted by <strong><a class="link-light" href="/users/<%= campground.author.id %>"><%= campground.author.username %></a></strong> on 
 							<em> <%= moment(campground.createdAt).format("dddd, MMMM Do YYYY")%></em>
 						</p>
 						<% if(currentUser && campground.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-							<!-- <div class="d-inline-flex float-end">
+							<!-- editing + deleting a camp-->
+							<div class="d-inline-flex float-end">
 								<a href="/campgrounds/<%= campground._id %>/edit" class="btn btn-outline-warning mr-2">Edit</a>
 								<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
 									<button class="btn btn-outline-danger delete-button">Delete</button>
 								</form>
-							</div> -->
+							</div> 
 						<% } %>
 					</div>
 				</div>
@@ -36,6 +37,16 @@
 				<div class="mb-2">
 					<a href="https://www.rei.com/h/camping-and-hiking" class="btn light-brown text-white show-btn"><i class="fa fa-binoculars add" aria-hidden="true"></i> Gear Up</a>
 				</div>
+				
+				<div class="mb-2">
+					<a href="https://basecampfood.com/collections/camping-meals" class="btn light-brown text-white show-btn"><i aria-hidden="true"></i>food delivery</a>
+				</div>
+
+				<div class="mb-2">
+					<a href="https://koa.com/blog/camping-safety-tips/" class="btn light-brown text-white show-btn"><i aria-hidden="true"></i>safety tips</a>
+				</div>
+					
+
 				<div class="card border border-white mb-2">
 					<!-- Google AdSense -->
 					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576072318340130"

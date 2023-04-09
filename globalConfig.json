@@ -1,2 +1,1 @@
-{"mongoUri":"mongodb://127.0.0.1:40010/jest?","mongoDBName":"jest"}
-// Previously {"mongoUri":"mongodb://127.0.0.1:44154/jest?","mongoDBName":"jest"}
+{"mongoUri":"mongodb://127.0.0.1:44407/jest?","mongoDBName":"jest"}

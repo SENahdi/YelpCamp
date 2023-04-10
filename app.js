@@ -34,7 +34,7 @@ mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
 // linking the database here with the one on Heroku
-var url = mongodb+srv://Saleh:Saleh12345@yelpcamp.xywzpzu.mongodb.net/camp?retryWrites=true&w=majority;
+var url = "mongodb+srv://Saleh:Saleh12345@yelpcamp.xywzpzu.mongodb.net/camp?retryWrites=true&w=majority";
 // Use the database below when in production
 // "mongodb://localhost/temporary_database"
 // checking DATABASEURL value

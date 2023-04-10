@@ -34,7 +34,7 @@ mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
 // linking the database here with the one on Heroku
-var url = process.env.DATABASEURL;
+var url = mongodb+srv://Saleh:Saleh12345@yelpcamp.xywzpzu.mongodb.net/camp?retryWrites=true&w=majority;
 // Use the database below when in production
 // "mongodb://localhost/temporary_database"
 // checking DATABASEURL value
@@ -86,7 +86,7 @@ app.locals.moment = require("moment");
 
 // Passport Configuration
 app.use(require("express-session")({
-	secret: process.env.PASSPORT_SECRET,
+	secret: adminpwd,
 	resave: false,
 	saveUninitialized: false
 }));
@@ -119,7 +119,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-const port = process.env.PORT || 8080;
+const port = 8080;
 app.listen(port, process.env.IP, function(){
 	console.log("Server is on");
 	console.log(port);

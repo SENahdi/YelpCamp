@@ -22,4 +22,4 @@ ENV PORT=8080
 COPY . .
 
 EXPOSE 3000
-CMD [ "nodemon", "app.js" ]
+CMD [ "node", "app.js" ]

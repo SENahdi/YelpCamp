@@ -86,7 +86,7 @@ app.locals.moment = require("moment");
 
 // Passport Configuration
 app.use(require("express-session")({
-	secret: adminpwd,
+	secret: "adminpwd",
 	resave: false,
 	saveUninitialized: false
 }));

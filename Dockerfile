@@ -21,5 +21,5 @@ ENV PORT=8080
 # Bundle app source
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3010
 CMD [ "node", "app.js" ]

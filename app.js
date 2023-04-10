@@ -119,7 +119,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-const port = 8080;
+const port = 3000;
 app.listen(port, process.env.IP, function(){
 	console.log("Server is on");
 	console.log(port);
